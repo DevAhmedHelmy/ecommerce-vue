@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import frontendPages from "@/pages/frontend";
 import adminPages from "@/pages/admin";
 import FrontRoutes from "./FrontRoutes";
-
+import login from "@/pages/admin/login";
 import AuthRoutes from "./AdminRoutes";
 Vue.use(VueRouter);
 
@@ -12,6 +12,12 @@ const routes = [
     path: "/",
     component: frontendPages,
     children: FrontRoutes,
+  },
+ 
+  {
+    path: "/admin/login",
+    component: login,
+    name: "login"
   },
   {
     path: "/admin",
