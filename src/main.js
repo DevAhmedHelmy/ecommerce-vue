@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-Vue.config.productionTip = false
+import http from "@/core/plugins/axios";
+Vue.use(http);
 
+Vue.config.productionTip = false;
+
+Vue.component("topBar", () => import("@/pages/admin/layouts/topBar"));
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: (h) => h(App),
+}).$mount("#app");
