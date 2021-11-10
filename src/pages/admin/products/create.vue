@@ -2,25 +2,52 @@
   <div>
     <top-bar></top-bar>
     <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-6">
-                <h3 class="card-title">Products Data</h3>
+      <div class="col-12">
+
+      
+      <div class="card card-warning">
+              <div class="card-header">
+                <h3 class="card-title">General Data</h3>
               </div>
-              <div class="col-6">
-                <router-link :to="{ name: 'create-products' }"
-                  >Add new</router-link
-                >
+              
+              <div class="card-body">
+                <form   id="productForm">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter Product Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Product Price</label>
+                        <input type="number" name="price" class="form-control" placeholder="Enter Product Price" >
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="row">
+                    
+                     <div class="col-sm-6">
+                      <!-- textarea -->
+                      <div class="form-group">
+                        <label>Product Description</label>
+                        <textarea class="form-control" name="description" rows="3" placeholder="Enter Product Description"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                
+  
+                <button @click.prevent="storeProduct">submit</button>
+                </form>
               </div>
+             
             </div>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body"></div>
-          <!-- /.card-body -->
-        </div>
-      </div>
+            </div>
     </div>
   </div>
 </template>
@@ -29,14 +56,22 @@
 export default {
   name: "createProduct",
   data() {
-    return {
-      products: [],
-    };
+     
   },
-  created() {
-    this.getAll();
+ 
+  methods: {
+    async storeProduct(){
+      try {
+        const form = document.getElementById("productForm");
+        const data =  new FormData(form);
+          await this.$http.post(`/products`,data);
+          document.location.href = '/products';
+        
+      } catch (error) {
+        console.log(error);
+      }
+    }
   },
-  methods: {},
 };
 </script>
 

@@ -22,9 +22,9 @@
               <thead>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th>Product name</th>
+                  <th>price</th>
+                  <th >Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -32,28 +32,17 @@
                   <td>{{ product.id }}</td>
                   <td>{{ product.name }}</td>
                   <td>
-                    <div class="progress progress-xs">
-                      <div
-                        class="progress-bar progress-bar-danger"
-                        style="width: 55%"
-                      ></div>
-                    </div>
+                    {{ product.price }}
                   </td>
-                  <td><span class="badge bg-danger">55%</span></td>
+                  <td>  <router-link :to="{ name: 'edit-products',params: { id: product.id } }"
+                  >Add new</router-link
+                ></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <!-- /.card-body -->
-          <div class="card-footer clearfix">
-            <ul class="pagination pagination-sm m-0 float-right">
-              <li class="page-item"><a class="page-link" href="#">«</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">»</a></li>
-            </ul>
-          </div>
+        v
         </div>
       </div>
     </div>

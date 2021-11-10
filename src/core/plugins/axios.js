@@ -10,6 +10,7 @@ function createInstance(baseURL) {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.token}`,
+      'X-Requested-With': 'XMLHttpRequest'
     },
   });
 }
