@@ -1,22 +1,21 @@
 import axios from "axios";
+import Vue from "vue";
 
-const axiosInstance = axios.create();
+const devInstance = createInstance("http://127.0.0.1:8000/api");
+// const productionInstance = createInstance("http://localhost:3000"); // will change later
 
-axiosInstance.defaults.baseURL = `http://127.0.0.1:8000/api/`;
-axiosInstance.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
-// axiosInstance.defaults.headers.common[
-//   "X-localization"
-// ] = window.localStorage.getItem("locale")
-//   ? window.localStorage.getItem("locale")
-//   : "ar";
+function createInstance(baseURL) {
+  return axios.create({
+    baseURL,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.token}`,
+    },
+  });
+}
 
-// axiosInstance.interceptors.response.use(null, error => {
-//   if (error.response.status == 401) {
-//     store.commit("logout");
-//   }
-//   return Promise.reject(error);
-// });
-
-window.$axios = axiosInstance;
-
-export default axiosInstance;
+export default {
+  install() {
+    Vue.prototype.$http = devInstance;
+  },
+}; // Check debug/build mode

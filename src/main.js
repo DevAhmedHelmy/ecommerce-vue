@@ -1,12 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import axios from "axios";
-import VueAxios from "vue-axios";
 
-Vue.use(VueAxios, axios);
+import http from "@/core/plugins/axios";
+Vue.use(http);
+
 Vue.config.productionTip = false;
-require("@/core/plugins/axios");
+
 Vue.component("topBar", () => import("@/pages/admin/layouts/topBar"));
 new Vue({
   router,
