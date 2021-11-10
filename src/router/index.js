@@ -18,7 +18,6 @@ const routes = [
     component: adminPages,
     name: "admin",
     base: "/admin",
-
     children: AuthRoutes,
   },
 ];

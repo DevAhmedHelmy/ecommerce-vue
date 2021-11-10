@@ -10,7 +10,9 @@
                 <h3 class="card-title">Products Data</h3>
               </div>
               <div class="col-6">
-                <button>Add new</button>
+                <router-link :to="{ name: 'create-products' }"
+                  >Add new</router-link
+                >
               </div>
             </div>
           </div>

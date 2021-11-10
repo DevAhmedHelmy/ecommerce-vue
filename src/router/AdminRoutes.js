@@ -1,5 +1,7 @@
 import Home from "@/pages/admin/Home";
 import indexProduct from "@/pages/admin/products/index";
+import editProduct from "@/pages/admin/products/edit";
+import createProduct from "@/pages/admin/products/create";
 export default [
   {
     path: "/admin/test",
@@ -19,14 +21,14 @@ export default [
     path: "/admin/products/create",
     name: "create-products",
     components: {
-      adminPages: indexProduct,
+      adminPages: createProduct,
     },
   },
   {
     path: "/admin/products/edit/:id",
     name: "edit-products",
     components: {
-      adminPages: indexProduct,
+      adminPages: editProduct,
     },
   },
 ];
