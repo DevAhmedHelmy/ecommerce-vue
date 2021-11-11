@@ -2,6 +2,7 @@
   <div>
     <top-bar></top-bar>
     <div class="row">
+      {{ user }}
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
@@ -24,7 +25,7 @@
                   <th style="width: 10px">#</th>
                   <th>Product name</th>
                   <th>price</th>
-                  <th >Action</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,15 +35,20 @@
                   <td>
                     {{ product.price }}
                   </td>
-                  <td>  <router-link :to="{ name: 'edit-products',params: { id: product.id } }"
-                  >Add new</router-link
-                ></td>
+                  <td>
+                    <router-link
+                      :to="{
+                        name: 'edit-products',
+                        params: { id: product.id },
+                      }"
+                      >Add new</router-link
+                    >
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <!-- /.card-body -->
-        v
         </div>
       </div>
     </div>
@@ -55,6 +61,7 @@ export default {
   data() {
     return {
       products: [],
+      user: this.$store.state,
     };
   },
   created() {
@@ -62,12 +69,10 @@ export default {
   },
   methods: {
     async getAll() {
-      try {
-        const allData = await this.$http.get(`/products`);
-        this.products = allData.data.data;
-      } catch (error) {
-        console.log(error);
-      }
+      await this.$store.dispatch("fetchProducts", {
+        URL: "products",
+      });
+      this.products = this.$store.getters.getProducts.data;
     },
   },
 };

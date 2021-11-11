@@ -13,17 +13,18 @@ const routes = [
     component: frontendPages,
     children: FrontRoutes,
   },
- 
+
   {
     path: "/admin/login",
     component: login,
-    name: "login"
+    name: "login",
   },
   {
     path: "/admin",
     component: adminPages,
     name: "admin",
     base: "/admin",
+    meta: { auth: true },
     children: AuthRoutes,
   },
 ];
@@ -33,5 +34,16 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem("authToken");
+  if (to.matched.some((record) => record.meta.auth)) {
+    if (!token) {
+      next({ path: "/admin/login" });
+    } else {
+      next();
+    }
+  } else {
+    next(); // make sure to always call next()!
+  }
+});
 export default router;
