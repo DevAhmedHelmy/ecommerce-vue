@@ -7,7 +7,7 @@
           <div class="card-header">
             <h3 class="card-title">General Data</h3>
           </div>
-
+{{ errors }}
           <div class="card-body">
             <form id="productForm">
               <div class="row">
@@ -62,17 +62,25 @@
 <script>
 export default {
   name: "createProduct",
-  data() {},
+  data() {
+    return{
+
+      errors:[]
+    }
+  },
 
   methods: {
     async storeProduct() {
       try {
         const form = document.getElementById("productForm");
         const data = new FormData(form);
-        await this.http.post(`/products`, data);
-        document.location.href = "/products";
-      } catch (error) {
-        console.log(error);
+        const product = { URL: "products", data: data };
+        await this.$store.dispatch("storeProduct", product);
+         
+        this.$router.push({ name: "all-products" });
+      } catch (errors) {
+      
+        this.errors = errors;
       }
     },
   },

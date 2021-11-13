@@ -31,4 +31,8 @@ export default [
       adminPages: editProduct,
     },
   },
+  {
+    path: "/admin/products/delete/:id",
+    name: "delete-products",
+  },
 ];

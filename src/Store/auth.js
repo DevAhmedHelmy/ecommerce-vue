@@ -21,16 +21,16 @@ export default {
         localStorage.setItem("authToken", authUser.data.access_token);
         // This is functions in  mutations I call it for change values in state
         vuexContext.commit("setUserData", user);
-
         // The promise that will we back to the login.vue
         return authUser;
       } catch (error) {
-        // If any error happens in the login api
-        if (error.response) {
-          return error.response.data.errors;
-        } else if (error.response) {
+        if (error.response.status == 422) {
+          throw error.response.data.errors;
+          
+        } else if (error.response.status == 401) {
           // The reject() will sent an error to the login.vue
-          return error.response.data;
+          throw error.response.data;
+         
         }
       }
     },

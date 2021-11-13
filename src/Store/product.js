@@ -13,13 +13,7 @@ export default {
   actions: {
     async storeProduct(vuexContext, { URL, data }) {
       try {
-        await $axios.post(`${URL}`, data).then(() => {
-          Swal.fire(
-            "Changes Saved",
-            "The Product details have been added",
-            "success"
-          );
-        });
+        await $axios.post(`${URL}`, data);
       } catch (error) {
         throw error.response.data.errors;
       }
@@ -29,7 +23,7 @@ export default {
         const products = await $axios.get(paramObject.URL);
         await vuexContext.commit("setProducts", products.data);
       } catch (error) {
-        console.log("aaaa");
+        throw error.response.data.errors;
       }
     },
     async getProduct(vuexContext, paramObject) {
@@ -38,13 +32,12 @@ export default {
     },
     async updateProduct(vuexContext, paramObject) {
       try {
-        await $axios.post(paramObject.URL, paramObject.data).then(() => {
-          Swal.fire(
-            "Changes Saved",
-            "The Product details have been updated",
-            "success"
-          );
-        });
+        await $axios.post(paramObject.URL, paramObject.data);
+        Swal.fire(
+          "Changes Saved",
+          "The Product details have been updated",
+          "success"
+        );
       } catch (error) {
         throw error.response.data.errors;
       }

@@ -2,7 +2,7 @@
   <div>
     <top-bar></top-bar>
     <div class="row">
-      {{ user }}
+       
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
@@ -43,6 +43,7 @@
                       }"
                       >Add new</router-link
                     >
+                    <button @click.prevent="Delete(product.id)"> delete</button>
                   </td>
                 </tr>
               </tbody>
@@ -73,6 +74,18 @@ export default {
         URL: "products",
       });
       this.products = this.$store.getters.getProducts.data;
+    },
+    async Delete(id) {
+      const result = await this.$SwalChecks(
+        "You won't be able to revert this!"
+      );
+      if (result.value) {
+        const URL = "products/" + id;
+        await this.$store.dispatch("deleteProduct", URL);
+        this.products = this.products.filter((item) => {
+          return item.id != id;
+        });
+      }
     },
   },
 };

@@ -69,6 +69,8 @@ export default {
   data() {
     return {
       product: {},
+      errors: [],
+      url: `/products/` + this.$route.params.id,
     };
   },
 
@@ -81,24 +83,23 @@ export default {
         const form = document.getElementById("productForm");
         const data = new FormData(form);
         data.append("_method", "PATCH");
-        await this.http.post(`/products/` + this.$route.params.id, data);
-        document.location.href = "/admin/products";
-      } catch (error) {
-        console.log(error);
+
+        const product = { URL: this.url, data: data };
+        await this.$store.dispatch("updateProduct", product);
+
+        this.$router.push({ name: "all-products" });
+      } catch (errors) {
+        this.errors = errors;
       }
     },
     async getProduct() {
       try {
-        let productData = await this.http.get(
-          `/products/` + this.$route.params.id
-        );
+        let productData = await this.http.get(this.url);
         this.product = productData.data.data;
-      } catch (error) {
-        console.log(error);
+      } catch (errors) {
+        this.errors = errors;
       }
     },
   },
 };
 </script>
-
- 
