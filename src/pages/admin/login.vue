@@ -89,13 +89,10 @@ export default {
   methods: {
     async login() {
       try {
-        
-       await this.$store.dispatch("login", this.loginForm);
-      this.$router.push({ name: "admin" });
+        await this.$store.dispatch("login", this.loginForm);
+        this.$router.push({ name: "admin" });
       } catch (error) {
-        
         this.errors = error.message;
-         
       }
     },
     beforeRouteEnter(to, from, next) {

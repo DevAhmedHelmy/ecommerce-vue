@@ -1,0 +1,171 @@
+html {
+  direction: ltr !important;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lato', sans-serif;
+
+}
+.tithover{
+    font-family: 'Lato', sans-serif;
+
+}
+.upper_bar .lang .active {
+    border-left: none !important;
+    border-right: 2px solid #e4e4e4;
+    padding-left: 0 !important;
+    padding-right: 3% !important;
+    margin-left: 0 !important;
+    margin-right: 3% !important;
+}
+.pl-0, .px-0 {
+    padding-right: 0!important;
+    padding-left: 15px !important;
+}
+.titmain {
+
+    padding-right: 15px !important;
+    padding-left: 0px !important;
+}
+.asiderightcont {
+    border-left: 0;
+    border-right: 2px solid #e4e4e4 !important;
+    padding: 10% 10% 10% 0%;
+}
+.asideleft {
+   
+    padding: 15% 8% 2% 5%;
+}
+.asideleft .icons {
+    float: right;
+    padding: 2px 0 !important;
+}
+.secnew1 {
+    border-right: 2px solid #e4e4e4;
+    border-left: none;
+}
+.suadinows .titmain, .raia .titmain {
+    border-left: 3px solid #fb6359;
+    padding-left: 7px !important;
+    padding-right: 14px !important;
+    border-right: none;
+}
+.suadisideR .asiderightcont {
+    border-right: 2px solid #e4e4e4 !important;
+    padding: 0 10% 0 0;
+    border-left: none !important;
+}
+.pr-0, .px-0 {
+    padding-right: 15px!important;
+    padding-left: 0 !important;
+}
+.suadiNmain .asideleft {
+    padding: 9% 8% 2% 5%;
+}
+.suadiNmain .asideleft {
+    border-bottom: none;
+    border-right: none;
+    border-left: 2px solid #e4e4e4;
+}
+.suadisideL .asiderightcont {
+    border: none;
+    border-left: 2px solid #e4e4e4 !important;
+    border-right: none !important;
+    padding: 0 0 0 15px;
+}
+#slider .titmainnews {
+    padding: 10% 8% 5% 0%;
+}
+.thkafa .asideleftcont {
+    border-left: 2px solid #e4e4e4;
+    padding: 0 0% 10% 5%;
+    border-right: none;
+}
+#slider .carousel-control-prev, #slider1 .carousel-control-prev {
+    
+    position: unset;
+    float: right;
+/*    margin-left: 1%;*/
+}
+
+#slider .carousel-control-next, #slider1 .carousel-control-next {
+    
+    position: unset;
+    float: right;
+/*    margin-left: 1%;*/
+}
+footer .condi p {
+    padding: 21% 10% 8% 0;
+    border-right: 1px solid #ccc;
+    border-left: none;
+}
+.icon_bar a {
+    margin-right: 0;
+    margin-left: 6%;
+}
+.siderightartc {
+    border-right: 1px solid #ccc;
+    margin: 2% 0;
+    border-left: none;}
+.varticlIcon {
+    
+    right: 0;
+    left: 260px;
+}
+.sidartc .icon_bar a .fa-twitter {
+    margin-left: 0;
+    margin-right: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+.hads .asideright .titmain {
+    left: 10px;
+    right: 0;
+    }
+    .nashra .titmain {
+    right: 0;
+    left: 13px;
+        
+    }
+    .hads .titmain,.nashra .titmain,.maenas .titmain,.suadinows .titmain, .raia .titmain{
+        padding: 8px 15px !important;
+    }
+    .suadinows .titmain, .raia .titmain {
+    top: 45px;
+    left: 14px;
+        right: 0;
+    }
+    .suadisideL .asiderightcont{
+        border: none !important;
+    }
+    .suadiNmain .asideleft {
+        padding: 14% 8% 2% 4% !important;
+    }
+    #slider .titmainnews {
+    padding: 2% 8% 2% 0 !important;
+}
+    .thkafa .asideleftcont {
+        border:none;
+    }
+    
+    
+    
+    
+    
+    
+    
+}

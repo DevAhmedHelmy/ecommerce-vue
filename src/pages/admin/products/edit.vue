@@ -22,6 +22,9 @@
                       placeholder="Enter Product Name"
                       :value="product.name"
                     />
+                    <span class="text-danger" v-if="errors.name">
+                      {{ errors.name[0] }}
+                    </span>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -34,6 +37,9 @@
                       placeholder="Enter Product Price"
                       :value="product.price"
                     />
+                    <span class="text-danger" v-if="errors.price">
+                      {{ errors.price[0] }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -50,6 +56,9 @@
                       v-model="product.description"
                     >
                     </textarea>
+                    <span class="text-danger" v-if="errors.description">
+                      {{ errors.description[0] }}
+                    </span>
                   </div>
                 </div>
               </div>

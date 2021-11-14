@@ -7,7 +7,7 @@
           <div class="card-header">
             <h3 class="card-title">General Data</h3>
           </div>
-{{ errors }}
+
           <div class="card-body">
             <form id="productForm">
               <div class="row">
@@ -21,6 +21,9 @@
                       class="form-control"
                       placeholder="Enter Product Name"
                     />
+                    <span class="text-danger" v-if="errors.name">
+                      {{ errors.name[0] }}
+                    </span>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -32,6 +35,9 @@
                       class="form-control"
                       placeholder="Enter Product Price"
                     />
+                    <span class="text-danger" v-if="errors.price">
+                      {{ errors.price[0] }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -46,6 +52,9 @@
                       rows="3"
                       placeholder="Enter Product Description"
                     ></textarea>
+                    <span class="text-danger" v-if="errors.description">
+                      {{ errors.description[0] }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -60,13 +69,14 @@
 </template>
 
 <script>
+// import Errors from "@/pages/admin/layouts/errors";
 export default {
   name: "createProduct",
-  data() {
-    return{
 
-      errors:[]
-    }
+  data() {
+    return {
+      errors: [],
+    };
   },
 
   methods: {
@@ -76,10 +86,9 @@ export default {
         const data = new FormData(form);
         const product = { URL: "products", data: data };
         await this.$store.dispatch("storeProduct", product);
-         
+
         this.$router.push({ name: "all-products" });
       } catch (errors) {
-      
         this.errors = errors;
       }
     },

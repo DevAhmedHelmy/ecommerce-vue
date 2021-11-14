@@ -2,7 +2,6 @@
   <div>
     <top-bar></top-bar>
     <div class="row">
-       
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
@@ -10,8 +9,11 @@
               <div class="col-6">
                 <h3 class="card-title">Products Data</h3>
               </div>
-              <div class="col-6">
-                <router-link :to="{ name: 'create-products' }"
+              <div class="col-6 text-right">
+                <router-link
+                  class="btn btn-outline-primary mr-1"
+                  tag="button"
+                  :to="{ name: 'create-products' }"
                   >Add new</router-link
                 >
               </div>
@@ -41,9 +43,15 @@
                         name: 'edit-products',
                         params: { id: product.id },
                       }"
-                      >Add new</router-link
                     >
-                    <button @click.prevent="Delete(product.id)"> delete</button>
+                      <li class="fa fa-edit"></li
+                    ></router-link>
+                    <a
+                      class="btn btn-sm btn-clean btn-icon btn-icon-md"
+                      @click.prevent="Delete(product.id)"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </a>
                   </td>
                 </tr>
               </tbody>

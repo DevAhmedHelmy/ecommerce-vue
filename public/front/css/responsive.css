@@ -1,0 +1,601 @@
+/* column 5 bootstrab */
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+
+/*********************************************************************/
+
+
+
+
+@media (max-width:600px){}
+
+
+/***********************************************************************/
+
+
+/*responsive*/
+
+/*glaxy*/
+
+@media only screen and (max-width: 767px){
+    .upper_bar .lang .active {
+    padding-left: 7%;
+    margin-left: 5%;
+}
+
+.upper_bar .lang a {
+    font-size: 10px;
+    }
+    .leftside, .rightside {
+     margin-top: 4%;
+    }
+    .logo1 {
+    font-size: 21px;
+        margin: 0;
+        color: #373833;
+    }
+    .adleft, .adright, .divbrand {
+    height: auto !important;
+    margin: auto;
+}
+    .searchicon .fa-search{
+        font-size: 16px;
+    color: #7c7c7d;
+    }
+    .navbar .nav-itemXs {
+    padding: 0px 2px;
+    border: 1px solid #ccc;
+    margin: 1% 0%;
+}
+   .searchicon {
+    padding: 10px;
+    border-radius: 5px;
+    }
+    .upper_bar .container {
+    padding-right: 0;
+        padding-left: 0;
+    }
+    .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+    .upper_bar {
+    padding: 6px;
+    margin: 0;
+    }
+    .navbar{
+        padding: 10px !important;
+    }
+    .titnews {
+    font-size: 16px;
+    line-height: 27px;
+    }
+    .asiderightcont {
+    border: 2px solid #e4e4e4;
+    padding: 10% 4% 0% 4% !important;
+    position: relative;
+    bottom: 0;
+
+    }
+    .hads .asideright .titmain {
+        top: 12px;
+        right: 10px;
+    }
+    .titmain,.suadinows .titmain, .raia .titmain {
+    position: relative;
+    width: 60px;
+    padding: 8px 30px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    z-index: 9;
+    }
+    .suadinows .titmain, .raia .titmain{
+    top: 45px;
+    right: 14px;
+    }
+    .asideright:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .linetit {
+        display: none;
+    }
+    .asideleft {
+    margin-bottom: 2%;
+}
+    
+ 
+    #slider .carousel-control-prev, #slider1 .carousel-control-prev {
+    left: 0px;
+    top: 303px;
+    }
+    #slider .carousel-control-next, #slider1 .carousel-control-next {
+    right: 233px;
+    top: 303px;
+}
+    .p_aside {
+    font-size: 13px;
+    line-height: 25px;
+    margin-bottom: 2%;
+    }
+    .hads .asideright, .hads .articlemain {
+    height: auto;
+    margin-top: 7%;
+    margin-bottom: 14%;
+
+}
+    .hads .articlemain{
+    border: 2px solid #e4e4e4;
+    padding: 6% 4% 0% 4%;
+    position: relative;
+    bottom: 0;
+    overflow: inherit;
+}
+    .nashracont .nashrarowcont, .maenasrowcont, .suadinowsD, .suadisideL,.thkafa,.raida,.monwaet {
+    border: 2px solid #e4e4e4;
+    padding: 6% 4% 0% 4% !important;
+    position: relative;
+    bottom: 0;
+    overflow: inherit;
+    margin-top: 3%;
+    }
+    .hads .articlemain:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .hads .titmain {
+    bottom: 32px;
+    right: 0;
+    
+    }
+    #slider1 .bgsec {
+    background-color: #373833;
+        padding-bottom: 3%;
+    }
+   .nashra .titmain {
+    top: 36px;
+    right: 13px;
+}
+    .b-bottom {
+    
+        border-bottom: none;
+    }
+    .xxxx .suadisideL .asiderightcont {
+        border-top:none;
+        padding-top: 3px !important
+    }
+    .xxxx .suadisideL{
+        margin-top: 3%;
+        margin-bottom: 13%;
+    }
+    
+    .nashrarow1:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .secnew1 {
+        border: none;
+    border-bottom: 2px solid #e4e4e4;
+    padding-bottom: 0%;
+    margin-bottom: 0;
+        padding: 20px 4px;
+    }
+    .p-xs-0{
+        padding: 0 !important    }
+    .h-row {
+    height: auto;
+}
+    .order-xs-1{
+        order: 1;
+    }
+    .order-xs-2{
+        order: 2;
+    }
+    .maenas .titmain{
+        top: 22px;
+    }
+    .maenasrow:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .typenews {
+        font-size: 11px
+    }
+    .h-row2 {
+    height: auto;
+}
+     .sidartc .details-new {
+    font-size: 15px;
+         letter-spacing: 0px;
+    }
+    .bgtag h4{
+        font-size: 13px;
+    }
+    .bgtag {
+        margin: 7% 0 0;
+    }
+    h1 {
+    font-size: 25px;
+    line-height: 37px;
+}
+    
+    .secnew1:last-of-type{
+        border-bottom: none;
+    }
+    .suadinows:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .suadiNmain .details-new {
+    margin-top: 4%;
+    padding-bottom: 4%;
+}
+
+.suadisideR .details-new {
+    font-size: 16px;
+    letter-spacing: 0px;
+    }
+    .suadinowsD .imgsuadiN {
+    margin: 0 0 3%;
+    height: auto;
+}
+    .typenews1 {
+        font-size: 13px;}
+    .suadisideL .asiderightcont {
+    border: none;
+    border-top: 2px solid #e4e4e4;
+    margin-top: 0%;
+    padding: 2% 0 !important;
+    }
+    .suadiNmain .details-new {
+        margin-bottom: 5%;
+    }
+    .suadisideR .asiderightcont, .suadinowsD .articlemain, .suadisideL .asiderightcont {
+    height: auto;
+    margin-bottom: 4%;
+    }
+    .suadiNmain .asideleft {
+    padding: 14% 4% 2% 8%;
+    height: auto;
+        border: 2px solid #e4e4e4;
+    }
+    .lastnews22 {
+    font-size: 15px;
+        line-height: 20px;
+    }
+    .imgAD2 {
+        height: auto;
+    }
+    .gzirarb .suadinows{
+       margin-bottom: 17%; 
+    }
+    .gzirarb .asideleft {
+        height:auto !important;
+    }
+    .suadiNmain .details-new:last-of-type{
+            margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0
+    }
+    .raia .asideleft {
+    z-index: 7;
+    padding: 7% 5% 2% 8%;
+    height: auto;
+    overflow: initial;
+    position: relative;
+    bottom: 0;
+    top: 55px;
+    border: 2px solid #e4e4e4;
+    }
+     .raia .titmain {
+         top: -36px;
+         right: 14px;
+    }
+    .asideleft:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .asideleft .lastnews {
+    font-size: 13px;
+        line-height: 18px
+    }
+    .news1 {
+    margin-bottom: 1%;
+}
+    .thkafa {
+    margin-top: 36%;
+}
+.thkafa .titmain {
+    top: -33px;
+    right: 14px;
+    }
+    .thkafa:hover .titmain{
+        border: 2px solid #e4e4e4 ;
+    }
+    .carousel-item .imgslide{
+        height: auto;
+    }
+    #slider .titmainnews {
+    padding: 2% 0 2% 8%;
+}
+     #slider h1 {
+    font-size: 20px;
+}
+    #slider .typenews1 {
+        bottom: -79px;
+    }
+    #slider .carousel-item {
+    height: 450px;
+}
+    .thkafa .asideleftcont {
+    border-right: none;
+    padding: 0;
+    bottom: 20px;
+}
+    .raida,.monwaet {
+    margin-top: 17%;
+    padding-bottom: 5% !important;
+}
+     .raida .titmain,.monwaet .titmain {
+    top: -30px;
+         right: 14px;
+    }
+    #slider1 .titmainnews {
+    line-height: 35px;
+    font-size: 24px;
+}
+    .mt-xs-1{
+            margin-top: 1rem!important;
+
+    }
+ #slider .carousel-control-next, #slider1 .carousel-control-next,#slider .carousel-control-prev, #slider1 .carousel-control-prev{
+     margin-top: unset !important;
+    }
+    .mb-xs-1{
+        margin-bottom: 30px;
+    }
+    .mt-xs-0{
+        margin-top: 0 !important;
+    }
+    .thumb-overlay .thumb-title {
+        font-size: 13px;
+    }
+    .thumb-meta {
+    font-size: 10px;
+}
+/*
+    .thumb-overlay .thumb-desc {
+    font-size: 10px;
+    max-height: 50px;
+    overflow: visible;
+        opacity: 1;
+    }
+*/
+    footer .condi p {
+    font-size: 14px;
+    padding: 10% 3px 8% 3%;
+    border: none;
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 30px !important;
+    text-align: center;
+    
+    }
+    .social-iconf {
+    border-top: 1px solid #ccc;
+    height: 100px;
+        padding: 16px;
+    }
+    
+    footer h3 {
+    font-size: 17px;
+/*        text-align: center;*/
+    }
+    footer ul li {
+    line-height: 26px;
+/*        text-align: center*/
+    }
+    footer .xxxx p{
+        border: none !important;
+        border-top:1px solid #ccc !important;
+        margin-bottom: 0px !important;
+        padding: 6% 3px 5% 3%;
+    }
+    footer ul li a{
+        font-size: 14px;
+    }
+/*
+    .modal-body {
+
+        padding: 12% 10%;}
+*/
+ .cntr {
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    direction: rtl;
+}
+.cntr .cntr-innr {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/*** STYLES ***/
+.search {
+  display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0;
+    padding: 1px 1px 0px 1px;
+    border: 3px solid #ccc;
+    border-radius: 25px;
+    transition: all 1s ease;
+    cursor: text;
+}
+.search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 18px;
+    right: -7px;
+    top: 18px;
+    background: #ccc;
+    border-radius: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-58deg);
+    transition: all 1s ease;
+}
+.search.active,
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+}
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+}
+.search input {
+      width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    color: inherit;
+    background: transparent;
+    outline-width: 0px;
+}
+.artchome h1 {
+    font-size: 25px;
+}
+   .siderightartc {
+    border: none;
+    border: 1px solid #ccc;
+    margin: 2% auto;
+    text-align: center;
+    box-shadow: 1px 1px 10px #ccc;
+}
+    .siderightartc .icons{
+        text-align: center;
+    }
+
+    .upper_bar .lang a ,.Date{
+        font-size: 12px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+    
+
+
+/*******************************************************************
+
+/* Small Mobiles */
+
+@media (max-width:400px) {
+ 
+}
+
+
+
+/********************************************************************/
+
+
+
+
+/*iphone5*/
+
+@media (max-width: 320px) {
+
+   #slider .carousel-item {
+    height: 420px;
+}
+}
+
+/********************************************************************/
+
+
+/*iphonex&6&7&8*/
+
+@media only screen and (min-width:375px) {}
+
+
+
+/*********************************************************************/
+
+
+/*pixel 2xl*/
+
+@media only screen and (min-width:411px) {
+
+ 
+}
+
+
+
+/*pixel 2*/
+
+@media only screen and (min-width:731px) {
+
+
+}
+
+
+
+/* meduim labs */
+
+
+/*ipad*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+
+
+
+
+
+/*ipad pro*/
+
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+  
+
+}
+
+
+/****************************************************************/
+
+/* large labs */
+
+@media (min-width: 1200px) {
+ 
+
+}

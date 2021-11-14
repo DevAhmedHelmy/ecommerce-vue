@@ -4,6 +4,7 @@ Vue.use(Vuex);
 
 import Auth from "./auth";
 import Product from "./product";
+import Cart from "./cart";
 export const store = new Vuex.Store({
   state: {
     token: "",
@@ -45,5 +46,6 @@ export const store = new Vuex.Store({
   modules: {
     Auth: Auth,
     Product: Product,
+    Cart: Cart,
   },
 });

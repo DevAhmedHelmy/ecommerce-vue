@@ -1,19 +1,14 @@
 <template>
   <div>
     <top-bar></top-bar>
-    <div>
-      testing
-    </div>
+    <div>ddddddddddddddddddddddddddddd</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
- 
 
 export default {
- 
-  name: 'Home',
- 
-}
+  name: "Home",
+};
 </script>
