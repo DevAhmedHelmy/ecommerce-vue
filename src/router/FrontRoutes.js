@@ -28,6 +28,7 @@ export default [
   },
   {
     path: "cart",
+    meta: { auth: true },
     components: {
       frontendPages: cart,
     },
